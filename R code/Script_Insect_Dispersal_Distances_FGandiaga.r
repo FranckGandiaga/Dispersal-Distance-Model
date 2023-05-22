@@ -1461,9 +1461,7 @@ coord_samples <- read.csv("PstDc12-14_bis.csv",sep =",", h=T)
 sampling_dates <- read.csv("Dates samples.csv")
 
 #################################
-#                               #
 #     Generate overall map      #
-#                               #
 #################################
 
 setwd(biosimpath) #File with data after filtering
@@ -1496,9 +1494,7 @@ plot(rasterToPolygons(res,dissolve=T), add=TRUE, border='black', lwd=1) # Adds b
 
 
 #############################
-#                           #
 #     Samples position      #
-#                           #
 #############################
 
 
@@ -1526,9 +1522,7 @@ plot(rasterToPolygons(croprast,dissolve=T), add=TRUE, border='black', lwd=1) # A
 
 
 ##########################
-#                        #
 #     Generate maps      #
-#                        #
 ##########################
 
 #### Date selection by hand ####
