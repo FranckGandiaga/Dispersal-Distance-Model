@@ -8,19 +8,19 @@ For more information you can access our publication: REF
 
 Phenological predictions were done using the **BioSIM** software (Régnière et al. 2012 available here: https://cfs.nrcan.gc.ca/projects/133.
 This method was developed using the **R software** (R Core Team 2020) and relies on a series of packages:
-•	data.table
-•	fdrtool
-•	fieldRS
-•	ggplot2
-•	grainscape
-•	igraph
-•	knitr
-•	plyr
-•	raster
-•	rgeos
-•	stringr
-•	survival
-•	tidyverse
+- data.table
+- fdrtool
+- fieldRS
+- ggplot2
+- grainscape
+- igraph
+- knitr
+- plyr
+- raster
+- rgeos
+- stringr
+- survival
+- tidyverse
 
 ##R code explications
 
