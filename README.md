@@ -6,7 +6,7 @@ For more information you can access our publication: REF
 
 ## Software
 
-Phenological predictions were done using the **BioSIM** software (Régnière et al. 2012 available here: https://cfs.nrcan.gc.ca/projects/133.
+Phenological predictions were done using the **BioSIM** software (Régnière and St-Amant, Régnière et al. 2012) available here: https://cfs.nrcan.gc.ca/projects/133.
 This method was developed using **R version 4.3.0** (R Core Team 2020) and relies on a series of packages:
 - data.table
 - fdrtool
@@ -78,6 +78,7 @@ This is the map generator module. It creates maps that are a visual representati
 
 - Hirsch, B. T., M. D. Visser, R. Kays, and P. A. Jansen. 2012. Quantifying seed dispersal kernels from truncated seed-tracking data. Methods in Ecology and Evolution 3:595-602.
 - R Core Team (2020. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.
+- Régnière, J., and R. St-Amant. 2007. Stochastic simulation of daily air temperature and precipitation from monthly normals in North America north of Mexico. International Journal of Biometeorology 51:415-430.
 - Régnière, J., R. St-Amant, and P. Duval. 2012. Predicting insect distributions under climate change from physiological responses: spruce budworm as an example. Biological Invasions 14:1571-1586.
 
 
