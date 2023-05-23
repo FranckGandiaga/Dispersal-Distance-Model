@@ -1251,8 +1251,10 @@ dmFir <-dmFir[,-1]
 dmSpruce <- read.csv(paste("CI",CI,"_dmSpruce_",types,"_rest-",contained,"_",package,".csv",sep=""),h=T)
 dmSpruce <-dmSpruce[,-1]
 }
+###################################
+#     Select data for kernels     #
+###################################
 
-#### Select data for kernels
 datx = "dmSpruce" # Possible names for file and graph title - dyTot, dySpruce , dmSpruce, dyFir, dmFir or for all info not just 1st line kernSpA - kernFA 
 xtrunc = dmSpruce
 xhist = 900 # max value of x axis
