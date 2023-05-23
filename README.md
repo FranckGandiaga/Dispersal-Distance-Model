@@ -7,6 +7,7 @@ For more information you can access our publication: REF
 ## Software
 
 Phenological predictions were done using the **BioSIM** software (Régnière and St-Amant, Régnière et al. 2012) available here: https://cfs.nrcan.gc.ca/projects/133.
+
 This method was developed using **R version 4.3.0** (R Core Team 2020) and relies on a series of packages:
 - data.table
 - fdrtool
