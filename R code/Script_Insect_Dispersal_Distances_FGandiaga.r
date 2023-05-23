@@ -510,7 +510,7 @@ all_samples = sampling_dates[,c("Name")] #all_samples=all_samples[-1] # if need 
 # Option to restrict raster to a geographical area of interest or not by giving the output file a specific name.
 # Either user wants no restriction then "NO RESTRICTION" has to match line 479: if(contained == "NO RESTRICTION"){  
 # Any other option will restrict the map 
-contained = "defol14_minmax"  # Possible options: # "Beaud2011_Fir+Spr_minmax",  "defol2014_minmax" 
+contained = "defol14_minmax"  # Possible options: "NO RESTRICTION" "Beaud2011_Fir+Spr_minmax",  "defol2014_minmax" 
 
 # Specify map for geographical restrictions
 # See Module 4 for map creation - in this study # piceaspp2011 (Fir+Spr) or #defol2014
@@ -546,7 +546,7 @@ for(k in 1:length(all_samples)){
     res<-raster("sq100_ON_to_NFL.tif") # 1 = QC, 2 = NS, 3 = NFL, 4 = NB, 5 = PEI, 6 = ON ,
     isBecomes <- cbind(c(1, 2, 3, 4,5,6), c(1,1,1,1,1,1)) # value at least = 1
     
-  if(contained == "no_minmax"){  
+  if(contained == "NO RESTRICTION"){  
     pts <- c_dat_or_pos[,c("X","Y")] # coordinates of cells with adults
   }else{
     # If want to adjust to Defoliated area
