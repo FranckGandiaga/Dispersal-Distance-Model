@@ -207,7 +207,7 @@ for(z in 1:length(years)){
 
 ####     Fuse outputs from first filter ####   
 CI = 95 # can be a vector: c(66,95,99)
-years = c("2015","2016","2017","2018","2019","2020")
+years <- c("2012","2013","2014")
 
 #Fir
 combinedFir = data.frame(matrix(0, ncol = 7, nrow = 0))
@@ -249,7 +249,7 @@ Spruce <- read.table(paste("CI",CI,"Spruce.txt",sep=""), h=T)
 sites <- unique(Spruce$Name) #same for Spruce, no need to change name
 
 
-years <- c("2015","2016","2017","2018","2019","2020") # to have 2012 on top of file
+years <- c("2012","2013","2014")
 
 for(z in 1:length(years)){
   year = years[z]
@@ -301,7 +301,7 @@ colnames(CIFir) <- colnames(Fir)
 sites <- unique(Fir$Name) #same for Fir, no need to change name
 
 
-years <- c("2015","2016","2017","2018","2019","2020") # to have 2012 on top of file
+years <- c("2012","2013","2014")
 
 for(z in 1:length(years)){
   year = years[z]
@@ -347,7 +347,7 @@ for(z in 1:length(years)){
 
 ## Load first filtered data
 CI = 95 # can be a vector: c(66,95,99)
-years = c("2015","2016","2017","2018","2019","2020")
+years <- c("2012","2013","2014")
 
 #Fir
 combinedFir = data.frame(matrix(0, ncol = 7, nrow = 0))
