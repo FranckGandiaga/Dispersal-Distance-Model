@@ -508,7 +508,7 @@ buff_prox <- 10000
 all_samples = sampling_dates[,c("Name")] #all_samples=all_samples[-1] # if need to run for some specific sites
 
 # Option to restrict raster to a geographical area of interest or not by giving the output file a specific name.
-# Either user wants no restriction then "NO RESTRICTION" has to match line 479: if(contained == "NO RESTRICTION"){  
+# Either user wants no restriction then "NO RESTRICTION" has to match line 549: if(contained == "NO RESTRICTION"){  
 # Any other option will restrict the map 
 contained = "defol14_minmax"  # Possible options: "NO RESTRICTION" "Beaud2011_Fir+Spr_minmax",  "defol2014_minmax" 
 
