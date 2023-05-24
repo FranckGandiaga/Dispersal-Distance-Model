@@ -676,8 +676,11 @@ for(k in 1:length(all_samples)){
 # Save Loop run history as a .csv file
 LoopMetaData <- as.data.frame(outputloop)
 colnames(LoopMetaData) <- paste(resource_name,"_",min_adult,"_CI",CI,"_rest-",contained,"_Dist_origins_","_",package,".csv", sep="")
+setwd(paste(outputpath,resource_name,"/",resource_name,"_",min_adult,"_CI",CI,"_rest-",contained,"_",package,sep="")) # set directory to that folder
 write.csv(LoopMetaData, paste("Dispersal_Distances_Loop_runs_",resource_name,"_",min_adult,"_CI",CI,"_rest-",contained,"_Dist_origins_","_",package,".csv", sep=""))
 
+#Reset path
+setwd(datapath)
 
 ######################################################
 #                                                    #
