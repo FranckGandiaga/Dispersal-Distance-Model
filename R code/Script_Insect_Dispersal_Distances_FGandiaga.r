@@ -523,6 +523,9 @@ CI = 95
 # "fieldRS" or "Grainscape". For Euclidean distances, fieldRS is sufficient and less buggy. In a future iteration Grainscape will allow for additional map options such as 'Least path resistance"
 package = "fieldRS"
 
+# Create empty object to save loop runs history
+outputloop <- c()
+
 ################# DISTANCE MEASURING LOOP #################
 
 for(k in 1:length(all_samples)){
@@ -580,12 +583,16 @@ for(k in 1:length(all_samples)){
     # Run Loop 
     if(nrow(pts) <= 3 ){ # removes patches with low number of pixels to avoid hce error due to MPG function
       print(paste(sample,"_",dateselect[j],"_No suitable conditions for adult moths presence",sep=""))
+      outputloop <- c(outputloop,paste(sample,"_",dateselect[j],"_No suitable conditions for adult moths presence",sep=""))    
           } else {
       if (Negpatches[1] > 1){
         print(paste(sample,"_",dateselect[j],"_Presence of moths expected - No analysis needed",sep=""))
+        outputloop <- c(outputloop,paste(sample,"_",dateselect[j],"_Presence of moths expected - No analysis needed",sep=""))
+        
                    } else {
         print(paste(sample,"_",dateselect[j],"_Presence of moths unexpected - Raster ready - Distances measured",sep=""))
-        
+        outputloop <- c(outputloop,paste(sample,"_",dateselect[j],"_Presence of moths unexpected - Raster ready - Distances measured",sep=""))
+              
               if(package == "Grainscape"){
               #### Map with IDs
         patchyMPG <- MPG(rast, patch = (rast == 2))
@@ -666,6 +673,10 @@ for(k in 1:length(all_samples)){
   k = k+1
 }
 
+# Save Loop run history as a .csv file
+LoopMetaData <- as.data.frame(outputloop)
+colnames(LoopMetaData) <- paste(resource_name,"_",min_adult,"_CI",CI,"_rest-",contained,"_Dist_origins_","_",package,".csv", sep="")
+write.csv(LoopMetaData, paste("Dispersal_Distances_Loop_runs_",resource_name,"_",min_adult,"_CI",CI,"_rest-",contained,"_Dist_origins_","_",package,".csv", sep=""))
 
 
 ######################################################
