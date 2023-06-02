@@ -1236,15 +1236,18 @@ package = "fieldRS" # "fieldRS" or "Grainscape"
 #Select geographical restriction
 contained="defol14_minmax"
 #types of migrants
-types = "all"# c("M1","M2","M3")# "M1", "M2", "M3", "M1", "M2", "M3"
-#Compilation option for the data
-comp_opt <- "Migrant" # Or "Year"
+types = "all"# other choices: c("M1","M2","M3") or "M1", "M2", "M3" and all possible permutations
 ## For graphical cohesion
-ticks = 12
-#ticks = 1+(3.322*log(length(xtrunc)))
+ticks = 12 #ticks = 1+(3.322*log(length(xtrunc)))
+xhist = 900 # max value of x axis
+colR <- "darkseagreen4" #"darkslategray3" # topo.colors(xtrunc) # Color of the histogram
 
-# Load data
-if(comp_opt == "Year"){
+###################################
+#     Select data for kernels     #
+###################################
+                                                  
+# STEP 1: Load necessary data
+# data compiled per year
   dyTot <- read.csv(paste("CI",CI,"_dyTot_",types,"_rest-",contained,"_",package,".csv",sep=""),h=T)
   dyTot <-dyTot[,-1]
   dyFir <- read.csv(paste("CI",CI,"_dyFir_",types,"_rest-",contained,"_",package,".csv",sep=""),h=T)
@@ -1252,24 +1255,20 @@ if(comp_opt == "Year"){
   dySpruce <- read.csv(paste("CI",CI,"_dySpruce_",types,"_rest-",contained,"_",package,".csv",sep=""),h=T)
   dySpruce <-dySpruce[,-1]
 
-}else{
-dmTot <- read.csv(paste("CI",CI,"_dmTot_",types,"_rest-",contained,"_",package,".csv",sep=""),h=T)
-dmTot <-dmTot[,-1]
-dmFir <- read.csv(paste("CI",CI,"_dmFir_",types,"_rest-",contained,"_",package,".csv",sep=""),h=T)
-dmFir <-dmFir[,-1]
-dmSpruce <- read.csv(paste("CI",CI,"_dmSpruce_",types,"_rest-",contained,"_",package,".csv",sep=""),h=T)
-dmSpruce <-dmSpruce[,-1]
-}
-###################################
-#     Select data for kernels     #
-###################################
+# data compiled per type
+  dmTot <- read.csv(paste("CI",CI,"_dmTot_",types,"_rest-",contained,"_",package,".csv",sep=""),h=T)
+  dmTot <-dmTot[,-1]
+  dmFir <- read.csv(paste("CI",CI,"_dmFir_",types,"_rest-",contained,"_",package,".csv",sep=""),h=T)
+  dmFir <-dmFir[,-1]
+  dmSpruce <- read.csv(paste("CI",CI,"_dmSpruce_",types,"_rest-",contained,"_",package,".csv",sep=""),h=T)
+  dmSpruce <-dmSpruce[,-1]
 
-datx = "dmSpruce" # Possible names for file and graph title - dyTot, dySpruce , dmSpruce, dyFir, dmFir or for all info not just 1st line kernSpA - kernFA 
-xtrunc = dmSpruce
-xhist = 900 # max value of x axis
-colR <- "darkseagreen4" #"darkslategray3" # topo.colors(xtrunc) # Color of the histogram
+# STEP 2: Select data you want to use for the analysis
+  datx = "dmSpruce" # Possible names for file and graph title - dyTot, dySpruce , dmSpruce, dyFir, dmTot, dmFir  
+  xtrunc = dmSpruce # match name in datx with the object (they should have the same name)
 
-# Prepare data for CTR 
+                                                  
+# STEP 3: Prepare data for CTR 
 CTRdata=data.frame(
   d=xtrunc,
   evnt=c(rep(1,length(xtrunc))))
