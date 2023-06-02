@@ -963,7 +963,7 @@ write.table(dist_roundedM,paste("CI",CI,"_dist_roundedM_rest-",contained,"_minma
 #### or year
 date = c("2012","2013","2014")
 
-datkerns <- dplyr::select(datkerns,contains(c("M1","M2","M3"))) #remove M0 
+datkerns <- dplyr::select(datkerns,contains(c("M1","M2","M3"))) 
 
 data_kernels <- datkerns[1,]
 
@@ -1243,11 +1243,6 @@ comp_opt <- "Migrant" # Or "Year"
 ticks = 12
 #ticks = 1+(3.322*log(length(xtrunc)))
 
-#save range of values
-#range_values<-as.data.frame(matrix(ncol =1,nrow=length(input)*length(intervals)*length(containment)))
-range_values=c()
-
-
 # Load data
 if(comp_opt == "Year"){
   dyTot <- read.csv(paste("CI",CI,"_dyTot_",types,"_rest-",contained,"_",package,".csv",sep=""),h=T)
@@ -1370,8 +1365,8 @@ if(bestfit == "LN"){
   text(550,0.005,adj=0,bquote(mu == .(round(fitLN$par[1],2))))
   text(550,0.0045,adj=0,bquote(sigma == .(round(fitLN$par[2],2))))
 }else if(bestfit == "WB"){
-  text(550,0.005,adj=0,bquote(beta == .(round(fitW$par[1],2))))
-  text(550,0.0045,adj=0,bquote(eta == .(round(fitW$par[2],2))))
+  text(550,0.005,adj=0,bquote(alpha == .(round(fitW$par[1],2))))
+  text(550,0.0045,adj=0,bquote(beta == .(round(fitW$par[2],2))))
 }else if(bestfit == "N"){
   text(550,0.005,adj=0,bquote(beta == .(round(fitW$par[1],2))))
   text(550,0.0045,adj=0,bquote(eta == .(round(fitW$par[2],2))))
