@@ -423,8 +423,8 @@ coord_or <- read.csv("BioSIM_sq100_ON_NFL.csv", h=T)
 
 #Load sample coordinnates
 coord_samples <- read.csv("Trap locations_example.csv",sep =",", h=T)
-sampling_dates <- read.table("Dates samples_example.txt", h=T) #or Dates samples_0removed.txt if "No suitable conditions for adult moths presence" keeps repeating
-sampling_dates <- sampling_dates [c(1:26),c(1:11)]
+sampling_dates <-  read.csv("Dates samples_example.csv",sep =",", h=T) 
+
 
 #################################################################################################
 #                                                                                               #
