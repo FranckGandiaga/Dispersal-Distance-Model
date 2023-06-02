@@ -509,7 +509,7 @@ all_samples = sampling_dates[,c("Name")] #all_samples=all_samples[-1] # if need 
 
 # Option to restrict raster to a geographical area of interest or not by giving the output file a specific name.
 # Either user wants no restriction then "NO RESTRICTION" has to match line 549: if(contained == "NO RESTRICTION"){  
-# Any other option will restrict the map 
+# Any other option will restrict the map , if error msg: "file does not exist" at end of the loop then name is too long, change length of "contained"
 contained = "defol14_minmax"  # Possible options: "NO RESTRICTION" "Beaud2011_Fir+Spr_minmax",  "defol2014_minmax" 
 
 # Specify map for geographical restrictions
