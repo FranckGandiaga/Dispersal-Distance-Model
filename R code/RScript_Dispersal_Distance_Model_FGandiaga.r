@@ -1222,6 +1222,7 @@ if(types == c("all")){
 
 #This module was expanded from the code developed by Hirsch et al. 2012 (Appendix S1). 
 #It fits dispersal kernels distributions using Ordinary Least Squares regression (Hirsch et al. 2012; Appendix S1).
+#Reference: Hirsch, B. T., M. D. Visser, R. Kays, and P. A. Jansen. 2012. Quantifying seed dispersal kernels from truncated seed-tracking data. Methods in Ecology and Evolution 3:595-602.
 #It saves the data output of the analysis and creates the graphical representation of the analysis for a visual interpretation.
 
 setwd(datapath)
