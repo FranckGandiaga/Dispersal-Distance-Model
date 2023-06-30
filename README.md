@@ -3,7 +3,8 @@
 We developed this method to characterise patterns of dispersal in outbreaking forest insect pests using time series of moth capture data and phenology, using the spruce budworm as a motivating example. Our method combines time series of moth collection within a single season with a spatial phenological model that classifies individuals as either residents or potential migrants. 
 The version presented here was built for our specific project. A more generalized version is currently being developed.
 
-For more information you can access our publication: REF
+For more information you can access our publication: 
+Gandiaga, F. and James, P. M. A., 2023. Quantifying long-distance dispersal of an outbreaking insect species using trap capture data and phenology. Forest Ecology and Management, In Press
 
 ## Software
 
