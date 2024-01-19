@@ -4,7 +4,7 @@ We developed this method to characterise patterns of dispersal in outbreaking fo
 The version presented here was built for our specific project. A more generalized version is currently being developed.
 
 For more information you can access our publication:
-Gandiaga, F. and James, P. M. A., 2023. Quantifying long-distance dispersal of an outbreaking insect species using trap capture data and phenology. Forest Ecology and Management, In Press
+Gandiaga, Franck, and Patrick MA James. "Quantifying long-distance dispersal of an outbreaking insect species using trap capture data and phenology." Forest Ecology and Management 544 (2023): 121187.
 
 ## Software
 
